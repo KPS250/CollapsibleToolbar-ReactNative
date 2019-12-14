@@ -14,6 +14,7 @@ import SafeArea from './SafeArea';
 
 const HEADER_EXPANDED_HEIGHT = 150;
 const HEADER_COLLAPSED_HEIGHT = 56;
+
 const TITLE_EXPANDED_HEIGHT = 24;
 const TITLE_COLLAPSED_HEIGHT = 16;
 const {width: SCREEN_WIDTH} = Dimensions.get('screen');
@@ -40,7 +41,7 @@ export default class CollapsibleToolbar extends Component {
       extrapolate: 'clamp',
     });
 
-    const headerTitleHeight = this.state.scrollY.interpolate({
+    const headerTitleSize = this.state.scrollY.interpolate({
       inputRange: [0, HEADER_EXPANDED_HEIGHT - HEADER_COLLAPSED_HEIGHT],
       outputRange: [TITLE_EXPANDED_HEIGHT, TITLE_COLLAPSED_HEIGHT],
       extrapolate: 'clamp',
@@ -86,7 +87,7 @@ export default class CollapsibleToolbar extends Component {
                 {
                   color: Colors.black,
                   paddingLeft: headerSlide,
-                  fontSize: headerTitleHeight,
+                  fontSize: headerTitleSize,
                   opacity: headerTitleOpacity,
                 },
               ]}>
