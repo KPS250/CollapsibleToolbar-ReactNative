@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-import {Colors} from './Colors';
+import {Colors} from '../utils/Colors';
 import SafeArea from './SafeArea';
 
 const HEADER_EXPANDED_HEIGHT = 150;
@@ -18,7 +18,7 @@ const TITLE_EXPANDED_HEIGHT = 24;
 const TITLE_COLLAPSED_HEIGHT = 16;
 const {width: SCREEN_WIDTH} = Dimensions.get('screen');
 
-export default class CollaspibleToolbar extends Component {
+export default class CollapsibleToolbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -96,7 +96,7 @@ export default class CollaspibleToolbar extends Component {
               <TouchableOpacity onPress={() => this.props.backPress()}>
                 <Image
                   style={styles.backIcon}
-                  source={require('./assets/left-arrow.png')}
+                  source={require('../assets/left-arrow.png')}
                   resizeMode={'contain'}
                 />
               </TouchableOpacity>

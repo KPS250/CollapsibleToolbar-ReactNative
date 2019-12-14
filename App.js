@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, StyleSheet, Text, FlatList} from 'react-native';
-import CollaspibleToolbar from './CollaspibleToolbar';
-import {Colors} from './Colors';
+import CollapsibleToolbar from './components/CollaspibleToolbar';
+import {Colors} from './utils/Colors';
 
 const exercises = [
   'Running',
@@ -26,7 +26,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <CollaspibleToolbar
+        <CollapsibleToolbar
           title={'Exercises'}
           headerColor={Colors.primary}
           headerColorDark={Colors.primaryDark}
@@ -40,7 +40,7 @@ export default class App extends Component {
             keyExtractor={index => index.toString()}
             ItemSeparatorComponent={() => <View style={styles.separator} />}
           />
-        </CollaspibleToolbar>
+        </CollapsibleToolbar>
       </View>
     );
   }

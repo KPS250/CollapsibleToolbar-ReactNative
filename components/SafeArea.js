@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {SafeAreaView, View, StatusBar, StyleSheet} from 'react-native';
-import {Colors} from './Colors';
+import {Colors} from '../utils/Colors';
 
 export default class SafeArea extends Component {
   render() {
